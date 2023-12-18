@@ -11,6 +11,7 @@ return {
     tabstop = 4,
     expandtab = false,
     autochdir = true,
+    guifont = "FiraCode Nerd Font Mono:h14",
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
