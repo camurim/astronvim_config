@@ -30,6 +30,7 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    ["<F4>"] = { ":Neotree source=last action=focus toggle=true<cr>" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     -- ["<leader>a"] = {"<cmd>echo 'Hello world!'<cr>", desc="Say hello world!"},
