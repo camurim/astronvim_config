@@ -37,6 +37,13 @@ return {
       function() require("astronvim.utils").toggle_term_cmd "bash -ic gobang" end,
       desc = "Gobang",
     },
+    ["<C-l>"] = {
+      function()
+        local today = os.date "%Y-%m-%d"
+        vim.cmd("e ~/google-drive/obsidian_vaults/principal/00 - Daily Notes/" .. today .. ".md")
+      end,
+      desc = "Today Note",
+    },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     -- ["<leader>a"] = {"<cmd>echo 'Hello world!'<cr>", desc="Say hello world!"},
