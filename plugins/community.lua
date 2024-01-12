@@ -10,7 +10,27 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.bash" },
-  -- { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.angular" },
+  { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.python" },
+  {
+    "mfussenegger/nvim-jdtls",
+    opts = {
+      settings = {
+        java = {
+          configuration = {
+            runtimes = {
+              {
+                name = "JavaSE-17",
+                path = "/usr/lib/jvm/java-17-openjdk-amd64/",
+              },
+            },
+          },
+        },
+      },
+    },
+  },
 }
