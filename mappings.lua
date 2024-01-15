@@ -48,6 +48,10 @@ return {
       function() vim.cmd "e ~/google-drive/obsidian_vaults/principal/03 - Others/Quicknote.md" end,
       desc = "Quicknote",
     },
+    ["<C-/>"] = {
+      function() vim.cmd "lua require('neogen').generate()" end,
+      desc = "Neogen",
+    },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     -- ["<leader>a"] = {"<cmd>echo 'Hello world!'<cr>", desc="Say hello world!"},
