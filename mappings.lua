@@ -48,6 +48,40 @@ return {
       function() vim.cmd "e ~/google-drive/obsidian_vaults/principal/03 - Others/Quicknote.md" end,
       desc = "Quicknote",
     },
+    ["<C-;>"] = {
+      function()
+        local now = os.date "%Y%m%d%H%M%S"
+        local filename = "/home/carlos/google-drive/obsidian_vaults/principal/01 - Source Notes/" .. now .. ".md"
+        local file = io.open(filename, "w")
+
+        if file ~= nil then
+          file:write [[
+            ---
+            parent: 
+            sibling:
+            child:
+            ---
+
+            ## 
+
+            ----
+
+            **Font:** 
+            **Author:** 
+            **Page/Position:**
+            **URL:** 
+            **Tags:** 
+            **Links:** 
+            **Type:** 
+
+            ----
+          ]]
+          file:close()
+          vim.cmd("e " .. filename)
+        end
+      end,
+      desc = "Source Note",
+    },
     ["<C-/>"] = {
       function() vim.cmd "lua require('neogen').generate()" end,
       desc = "Neogen",
