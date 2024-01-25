@@ -34,8 +34,8 @@ return {
     ["<F3>"] = { ":Telescope buffers<cr>" },
     ["<F4>"] = { ":Neotree source=last action=focus toggle=true<cr>" },
     ["<C-t>"] = {
-      function() require("astronvim.utils").toggle_term_cmd "bash -ic gobang" end,
-      desc = "Gobang",
+      function() require("astronvim.utils").toggle_term_cmd "bash -ic ~/go/bin/lazysql" end,
+      desc = "Lazysql",
     },
     ["<C-,>"] = {
       function()
