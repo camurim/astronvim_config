@@ -33,6 +33,14 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     ["<F3>"] = { ":Telescope buffers<cr>" },
     ["<F4>"] = { ":Neotree source=last action=focus toggle=true<cr>" },
+    ["<F8>"] = {
+      function()
+        local current_buff = vim.api.nvim_buf_get_name(0)
+        local current_buff_path = current_buff:match "(.*/)"
+        require("astronvim.utils").toggle_term_cmd("fish -iC 'cd " .. current_buff_path .. "'")
+      end,
+      desc = "Toggle Fish Terminal",
+    },
     ["<C-t>"] = {
       function() require("astronvim.utils").toggle_term_cmd "bash -ic ~/go/bin/lazysql" end,
       desc = "Lazysql",
